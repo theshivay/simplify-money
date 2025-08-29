@@ -1,0 +1,177 @@
+.purchase-history {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.history-header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 0;
+}
+
+.history-header h3 {
+  margin: 0;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.history-header h3:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.history-content {
+  padding: 0;
+}
+
+.portfolio-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  background: #f8f9fa;
+}
+
+.summary-card {
+  padding: 25px;
+  text-align: center;
+  border-right: 1px solid #e9ecef;
+  transition: background 0.3s ease;
+}
+
+.summary-card:last-child {
+  border-right: none;
+}
+
+.summary-card:hover {
+  background: #e9ecef;
+}
+
+.summary-card h4 {
+  margin: 0 0 10px 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.summary-card .amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0;
+}
+
+.summary-card .gold {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 0;
+}
+
+.summary-card .count {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+}
+
+.transactions-list {
+  padding: 25px;
+}
+
+.transactions-list h4 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #FFD700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transaction-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.transaction-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.transaction-gold {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.transaction-id {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-family: monospace;
+}
+
+.transaction-date {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  margin-top: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .portfolio-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-card {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .summary-card:last-child {
+    border-bottom: none;
+  }
+  
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .transaction-details {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

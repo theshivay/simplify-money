@@ -1,0 +1,36 @@
+{
+  "name": "simplify-money-ai",
+  "version": "1.0.0",
+  "description": "AI-powered Gold Investment Workflow - Emulating Kuberi AI for Simplify Money",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "gold",
+    "investment",
+    "ai",
+    "mern",
+    "gemini",
+    "kuberi",
+    "simplify-money"
+  ],
+  "author": "Simplify Money",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theshivay/simplify-money-ai.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

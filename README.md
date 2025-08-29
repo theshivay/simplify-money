@@ -132,22 +132,28 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ## Installation & Setup  
 
-### 1. Clone the repository  
+### Manual Setup
 ```bash
-git clone https://github.com/theshivay/simplify-money-ai.git
-cd simplify-money-ai
-```
+# Install all dependencies
+npm run install-all
 
-### 2. Backend Setup  
-```bash
-cd backend
-npm install
+# Update environment variables in backend/.env
+# MONGO_URI=your_mongodb_connection_string
+# GEMINI_API_KEY=your_gemini_api_key
+
+# Run both backend and frontend
 npm run dev
 ```
 
-### 3. Frontend Setup  
+### Individual Setup
 ```bash
-cd frontend
+# Backend setup
+cd backend
+npm install
+npm run dev
+
+# Frontend setup (in new terminal)
+cd frontend  
 npm install
 npm start
 ```
