@@ -67,24 +67,35 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <ChatInterface
-          onAskQuestion={handleAskQuestion}
-          onPurchaseGold={handlePurchaseGold}
-          loading={loading}
-        />
-        
-        <PurchaseHistory
-          userId={userId}
-          purchases={purchaseHistory.purchases}
-          totalInvestment={purchaseHistory.user?.totalInvestment}
-          totalGoldGrams={purchaseHistory.user?.totalGoldGrams}
-        />
+                <div className="app-header">
+          <h1>Simplify Money - Gold Investment</h1>
+          <p>Professional AI-powered gold investment advisory platform</p>
+        </div>
+
+        <div className="main-grid">
+          <div className="fade-in-up">
+            <ChatInterface
+              onAskQuestion={handleAskQuestion}
+              onPurchaseGold={handlePurchaseGold}
+              loading={loading}
+            />
+          </div>
+          
+          <div className="slide-in-right">
+            <PurchaseHistory
+              userId={userId}
+              purchases={purchaseHistory.purchases}
+              totalInvestment={purchaseHistory.user?.totalInvestment}
+              totalGoldGrams={purchaseHistory.user?.totalGoldGrams}
+            />
+          </div>
+        </div>
         
         <footer className="app-footer">
           <p>
-            🏆 Simplify Money - AI-powered Gold Investment Platform<br/>
-            <small>Emulating Kuberi AI workflow for digital gold investments</small>
+            🏆 Simplify Money - AI-powered Gold Investment Platform
           </p>
+          <small>Emulating Kuberi AI workflow for digital gold investments</small>
           <div className="user-info">
             <small>User ID: {userId}</small>
           </div>
