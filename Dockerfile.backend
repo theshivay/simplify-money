@@ -1,0 +1,17 @@
+# Simplify Money - Docker Setup
+
+# Backend Dockerfile
+FROM node:18-alpine
+
+WORKDIR /app/backend
+
+# Copy backend package files
+COPY backend/package*.json ./
+RUN npm install
+
+# Copy backend source
+COPY backend/ ./
+
+EXPOSE 5001
+
+CMD ["npm", "start"]

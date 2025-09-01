@@ -9,7 +9,10 @@
     "client": "cd frontend && npm start",
     "build": "cd frontend && npm run build",
     "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "start": "cd backend && npm start"
+    "start": "cd backend && npm start",
+    "test-apis": "./test-apis.sh",
+    "deploy:vercel": "vercel --prod",
+    "deploy:build": "npm run build && npm run start"
   },
   "keywords": [
     "gold",

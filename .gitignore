@@ -13,6 +13,7 @@ yarn-error.log*
 
 # Production builds
 /frontend/build
+/frontend/.env
 /backend/dist
 
 # Runtime data

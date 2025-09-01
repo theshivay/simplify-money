@@ -132,30 +132,33 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 ## Installation & Setup  
 
-### Manual Setup
+### Quick Start (Recommended)
 ```bash
-# Install all dependencies
+# Clone and install all dependencies
+git clone https://github.com/theshivay/simplify-money.git
+cd simplify-money
 npm run install-all
 
-# Update environment variables in backend/.env
-# MONGO_URI=your_mongodb_connection_string
-# GEMINI_API_KEY=your_gemini_api_key
+# Set up environment variables (see DEPLOYMENT.md)
+# Update backend/.env with your MongoDB URI and Gemini API key
 
 # Run both backend and frontend
 npm run dev
+
+# Or run individually:
+npm run server  # Backend only (port 5001)
+npm run client  # Frontend only (port 3000)
 ```
 
-### Individual Setup
+### Testing APIs
 ```bash
-# Backend setup
-cd backend
-npm install
-npm run dev
+# Test all APIs quickly
+npm run test-apis
 
-# Frontend setup (in new terminal)
-cd frontend  
-npm install
-npm start
+# Or test individually:
+curl -X GET http://localhost:5001/api/health
+curl -X POST http://localhost:5001/api/ask -H "Content-Type: application/json" -d '{"userId": "test", "question": "Is gold good?"}'
+curl -X POST http://localhost:5001/api/purchase -H "Content-Type: application/json" -d '{"userId": "test", "amount": 10}'
 ```
 
 ---
@@ -192,9 +195,28 @@ Example **purchase document**:
 
 ## Deliverables  
 
-- Working **MERN backend with 2 APIs**  
-- **Gemini LLM integration**  
-- **Database entry for purchases** 
+✅ **Complete MERN Stack Implementation**  
+✅ **Two Required APIs:** `/api/ask` (LLM) and `/api/purchase` (Gold Purchase)  
+✅ **Gemini LLM Integration** with fallback responses  
+✅ **MongoDB Database** with User/Purchase collections  
+✅ **React Frontend** with professional chat interface  
+✅ **Error Handling & Rate Limiting**  
+✅ **Deployment Ready** with Docker, Vercel, Heroku configs  
+
+### 🚀 **Ready for Deployment**
+
+See `DEPLOYMENT.md` for detailed deployment instructions including:
+- **Vercel** (Recommended - serverless)
+- **Railway** (Easy deployment)
+- **Heroku** (Classic PaaS)
+- **Docker** (Containerized)
+- **DigitalOcean** (App Platform)
+
+### 📋 **Deployment Checklist**
+- [ ] Set environment variables (`MONGO_URI`, `GEMINI_API_KEY`)
+- [ ] Test APIs locally first (`npm run test-apis`)
+- [ ] Deploy backend first, then frontend
+- [ ] Update frontend `REACT_APP_API_URL` to your deployed backend URL 
 
 ---
 
